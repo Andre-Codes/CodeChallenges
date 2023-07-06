@@ -27,6 +27,7 @@ class Solution:
         if len(extra_chars) > 0:
             merged_words.append(extra_chars)
 
+# ____________________________________
 
 # Greatest Common Divisor of Strings
 # Example 1:
@@ -54,6 +55,7 @@ test = Solution()
 
 test.gcd_of_strings("ABABZABAB", "ABABZBBBB")
 
+# ____________________________________
 
 # There are n kids with candies. You are given an integer array candies, 
 # where each candies[i] represents the number of candies the ith kid has, 
@@ -77,6 +79,7 @@ test = Solution()
 candy_list = [3, 5, 6, 5, 2]
 test.kidsWithCandies(candy_list, 3)
 
+# ____________________________________
 
 # Can Place Flowers
 # Can n number of 1s be planted where there are no adjacent 1s next to it
@@ -99,5 +102,24 @@ test = Solution()
 answer = test.canPlaceFlowers([1, 0, 0, 0, 1, 0, 0], 2)
 print(answer)
 
+# ____________________________________
 
+# Challenge: Middle Slice
+# Given a list nums of integers, write a function to return a new list containing 
+# only the middle elements. If the length of the list is even, return the two middle elements.
+# Examples:
+# nums = [1, 2, 3, 4, 5]
+## print(middle_slice(nums))  # Output: [3]
 
+# nums = [1, 2, 3, 4, 5, 6]
+## print(middle_slice(nums))  # Output: [3, 4]
+
+def middle_slice(nums):
+    mid = nums[(len(nums)//2)] if len(nums) % 2 == 1 else nums[(len(nums)//2)-1:(len(nums)//2)+1]
+    return mid
+
+# The code directly accesses the middle element(s) using indexing and slicing operations, which are efficient operations.
+# The code uses a small amount of memory by not creating any additional data structures 
+# or allocating memory beyond the input list and the result.
+
+# ____________________________________
