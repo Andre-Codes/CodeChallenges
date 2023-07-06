@@ -1,4 +1,4 @@
-# 1768. Merge Strings Alternately
+# Merge Strings Alternately
 # Input: word1 = "ab", word2 = "pqrs"
 # Output: "apbqrs"
 # Explanation: Notice that as word2 is longer, "rs" is appended to the end.
@@ -28,7 +28,7 @@ class Solution:
             merged_words.append(extra_chars)
 
 
-# 1071. Greatest Common Divisor of Strings
+# Greatest Common Divisor of Strings
 # Example 1:
 #
 # Input: str1 = "ABCABC", str2 = "ABC"
@@ -37,6 +37,7 @@ class Solution:
 #
 # Input: str1 = "ABABAB", str2 = "ABAB"
 # Output: "AB"
+# ** work in progress
 
 class Solution:
     def gcd_of_strings(self, str1, str2):
@@ -54,6 +55,15 @@ test = Solution()
 test.gcd_of_strings("ABABZABAB", "ABABZBBBB")
 
 
+# There are n kids with candies. You are given an integer array candies, 
+# where each candies[i] represents the number of candies the ith kid has, 
+# and an integer extraCandies, denoting the number of extra candies that you have.
+
+# Return a boolean array result of length n, where result[i] is true if, 
+# after giving the ith kid all the extraCandies, they will have the greatest number of 
+# candies among all the kids, or false otherwise.
+# Note that multiple kids can have the greatest number of candies.
+
 class Solution:
     def kidsWithCandies(self, candies, extraCandies: int):
         maxCandy = max(candies)
@@ -68,8 +78,7 @@ candy_list = [3, 5, 6, 5, 2]
 test.kidsWithCandies(candy_list, 3)
 
 
-# 605. Can Place Flowers
-# FLOWER POTS
+# Can Place Flowers
 # Can n number of 1s be planted where there are no adjacent 1s next to it
 
 class Solution:
