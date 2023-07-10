@@ -123,3 +123,12 @@ def middle_slice(nums):
 # or allocating memory beyond the input list and the result.
 
 # ____________________________________
+
+# Challenge: Given a list of strings, in a single line of code, reutrn the list reversed as a single string
+
+strings = ['elb', 'isn', 'ehe', 'rpm', 'ocn', 'i']
+
+''.join([i[::-1] for i in strings[::-1]]) # Result: 'incomprehensible'
+
+# ____________________________________
+
