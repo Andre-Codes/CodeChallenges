@@ -139,9 +139,16 @@ strings = ['elb', 'isn', 'ehe', 'rpm', 'ocn', 'i']
     # summer_69([4, 5, 6, 7, 8, 9]) --> 9
     # summer_69([2, 1, 6, 9, 11]) --> 14
 
+# Solution 1
 def summer_69(arr):
     if 6 in arr:
         del arr[arr.index(6):(arr.index(9))+1]
+    return sum(arr)
+
+# Solution 2 (less memory)
+def summer_69(arr):
+    if 6 in arr:
+        return sum(list(filter(lambda n:arr.index(n) < arr.index(6) or arr.index(n) > arr.index(9), arr)))
     return sum(arr)
 
 # ____________________________________
